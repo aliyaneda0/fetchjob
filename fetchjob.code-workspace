@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "fetchjob-backend",
+      "path": "."
+    },
+    {
+      "name": "fetchjob-frontend",
+      "path": "../fetchjob-frontend"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/target": true,
+      "**/node_modules": true
+    },
+    "search.exclude": {
+      "**/target": true,
+      "**/node_modules": true
+    }
+  }
+}
