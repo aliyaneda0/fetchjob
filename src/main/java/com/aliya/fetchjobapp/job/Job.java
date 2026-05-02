@@ -1,8 +1,13 @@
 package com.aliya.fetchjobapp.job;
 
-public class Jobs {
+import jakarta.persistence.Entity;
 
-    private int id;
+import java.math.BigDecimal;
+
+@Entity
+public class Job {
+
+    private Long id;
 
     private String title;
 
@@ -10,15 +15,17 @@ public class Jobs {
 
     private String location;
 
-    private int minSalary;
+    private String status;
 
-    private int maxSalary;
+    private BigDecimal minSalary;
 
-    public int getId() {
+    private BigDecimal maxSalary;
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -46,26 +53,35 @@ public class Jobs {
         this.description = description;
     }
 
-    public int getMinSalary() {
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public BigDecimal getMinSalary() {
         return minSalary;
     }
 
-    public void setMinSalary(int minSalary) {
+    public void setMinSalary(BigDecimal minSalary) {
         this.minSalary = minSalary;
     }
 
-    public int getMaxSalary() {
+    public BigDecimal getMaxSalary() {
         return maxSalary;
     }
 
-    public void setMaxSalary(int maxSalary) {
+    public void setMaxSalary(BigDecimal maxSalary) {
         this.maxSalary = maxSalary;
     }
 
-    public Jobs(int id, String title, String description, String location, int minSalary, int maxSalary) {
+    public Job(long id, String title, String description, String location, String status, BigDecimal minSalary, BigDecimal maxSalary) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.status = status;
         this.location = location;
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
