@@ -84,7 +84,6 @@ public class JobServiceImpl implements JobService {
         dto.setMaxSalary(job.getMaxSalary());
         dto.setLocation(job.getLocation());
         dto.setStatus(job.getStatus());
-        dto.setCreatedAt(job.getCreatedAt());
         return dto;
     }
 

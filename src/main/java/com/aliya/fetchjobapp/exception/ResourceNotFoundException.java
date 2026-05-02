@@ -1,4 +1,4 @@
 package com.aliya.fetchjobapp.exception;
 
-public class ResourceNotFoundException {
+public class ResourceNotFoundException extends {
 }

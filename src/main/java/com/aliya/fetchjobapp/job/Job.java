@@ -15,11 +15,13 @@ public class Job {
 
     private String location;
 
-    private String status;
+    private JobStatus status;
 
     private BigDecimal minSalary;
 
     private BigDecimal maxSalary;
+
+    protected Job() {}
 
     public Long getId() {
         return id;
@@ -53,11 +55,11 @@ public class Job {
         this.description = description;
     }
 
-    public String getStatus() {
+    public JobStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(JobStatus status) {
         this.status = status;
     }
 
@@ -77,13 +79,13 @@ public class Job {
         this.maxSalary = maxSalary;
     }
 
-    public Job(long id, String title, String description, String location, String status, BigDecimal minSalary, BigDecimal maxSalary) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.status = status;
-        this.location = location;
-        this.minSalary = minSalary;
-        this.maxSalary = maxSalary;
-    }
+//    public Job(long id, String title, String description, String location, String status, BigDecimal minSalary, BigDecimal maxSalary) {
+//        this.id = id;
+//        this.title = title;
+//        this.description = description;
+//        this.status = status;
+//        this.location = location;
+//        this.minSalary = minSalary;
+//        this.maxSalary = maxSalary;
+//    }
 }
