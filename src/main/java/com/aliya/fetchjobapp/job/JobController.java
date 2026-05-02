@@ -27,7 +27,7 @@ public class JobController {
     }
 
     @GetMapping("/{id}")
-    public Job getJobById(@PathVariable Long id){
+    public JobDTO getJobById(@PathVariable Long id){
 
         return jobServiceImpl.getJobById(id);
     }
