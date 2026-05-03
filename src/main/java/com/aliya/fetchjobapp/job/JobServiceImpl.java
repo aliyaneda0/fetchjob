@@ -44,24 +44,7 @@ public class JobServiceImpl implements JobService {
     @Override
     @Transactional
     public JobDTO updateJob(Long id, JobDTO jobDTO) {
-        Job job = jobRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException(
-                        "Job not found with id: " + id));
-
-        // update only the fields that came in
-        job.setTitle(jobDTO.getTitle());
-        job.setDescription(jobDTO.getDescription());
-        job.setMinSalary(jobDTO.getMinSalary());
-        job.setMaxSalary(jobDTO.getMaxSalary());
-        job.setLocation(jobDTO.getLocation());
-
-        if (jobDTO.getStatus() != null) {
-            job.setStatus(jobDTO.getStatus());
-        }
-
-        // no need to call save() — JPA tracks the entity
-        // and flushes changes on transaction commit (@Transactional)
-        return toDTO(job);
+        return null;
     }
 
     @Override
@@ -97,4 +80,6 @@ public class JobServiceImpl implements JobService {
         job.setStatus(dto.getStatus() != null ? dto.getStatus() : JobStatus.DRAFT);
         return job;
     }
+
+
 }

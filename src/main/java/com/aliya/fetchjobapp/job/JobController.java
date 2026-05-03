@@ -21,9 +21,9 @@ public class JobController {
     ArrayList<Job> jobs = new ArrayList<>();
 
     @GetMapping
-    public List<Job> findAll(){
+    public List<JobDTO> getAllJobs(){
 
-        return jobs;
+        return jobServiceImpl.getAllJobs();
     }
 
     @GetMapping("/{id}")
@@ -32,7 +32,7 @@ public class JobController {
         return jobServiceImpl.getJobById(id);
     }
 
-    @PostMapping
+    @PostMapping("/post/job")
     public void createJob(@Valid @RequestBody JobDTO jobDTO){
          jobServiceImpl.createJob(jobDTO);
     }
