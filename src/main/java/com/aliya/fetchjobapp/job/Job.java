@@ -27,6 +27,9 @@ public class Job {
 
     private BigDecimal maxSalary;
 
+
+
+
     protected Job() {}
 
     public Long getId() {
