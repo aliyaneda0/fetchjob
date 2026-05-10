@@ -3,6 +3,8 @@ package com.aliya.fetchjobapp.review;
 import com.aliya.fetchjobapp.company.Company;
 import jakarta.persistence.*;
 
+
+
 public class Review {
 
     @Id
