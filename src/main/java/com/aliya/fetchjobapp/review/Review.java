@@ -4,7 +4,7 @@ import com.aliya.fetchjobapp.company.Company;
 import jakarta.persistence.*;
 
 
-
+@Entity
 public class Review {
 
     @Id
